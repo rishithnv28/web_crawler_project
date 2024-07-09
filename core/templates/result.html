@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crawl Results</title>
+</head>
+<body>
+    <h1>Crawl Results</h1>
+    <a href="?download=csv">Download as CSV</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Website</th>
+                <th>LinkedIn Page</th>
+                <th>Address</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Products/Services</th>
+                <th>Revenue Last Three Years</th>
+                <th>CEO</th>
+                <th>CEO LinkedIn URL</th>
+                <th>CEO Official Email</th>
+                <th>CFO</th>
+                <th>CFO LinkedIn</th>
+                <th>CFO Official Email</th>
+                <th>Procurement Head</th>
+                <th>Procurement Head LinkedIn</th>
+                <th>Procurement Head Official Email</th>
+                <th>SWOT Strengths</th>
+                <th>SWOT Weaknesses</th>
+                <th>SWOT Opportunities</th>
+                <th>SWOT Threats</th>
+                <th>Close Competitors</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.website }}</td>
+                <td>{{ result.linkedin_page }}</td>
+                <td>{{ result.address }}</td>
+                <td>{{ result.email }}</td>
+                <td>{{ result.phone }}</td>
+                <td>{{ result.products_services }}</td>
+                <td>{{ result.revenue_last_three_years }}</td>
+                <td>{{ result.ceo }}</td>
+                <td>{{ result.ceo_linkedin_url }}</td>
+                <td>{{ result.ceo_official_email }}</td>
+                <td>{{ result.cfo }}</td>
+                <td>{{ result.cfo_linkedin_url }}</td>
+                <td>{{ result.cfo_official_email }}</td>
+                <td>{{ result.procurement_head }}</td>
+                <td>{{ result.procurement_head_linkedin_url }}</td>
+                <td>{{ result.procurement_head_official_email }}</td>
+                <td>{{ result.swot_strengths }}</td>
+                <td>{{ result.swot_weaknesses }}</td>
+                <td>{{ result.swot_opportunities }}</td>
+                <td>{{ result.swot_threats }}</td>
+                <td>{{ result.close_competitors }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

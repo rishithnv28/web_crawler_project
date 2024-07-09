@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Crawler</title>
+</head>
+<body>
+    <h1>Enter URL to Crawl</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="url" name="url" required>
+        <button type="submit">Start Crawling</button>
+    </form>
+</body>
+</html>
